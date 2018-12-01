@@ -24,9 +24,6 @@ Things you may want to cover:
 * ...
 
 
-curl -H "Authorization: Bearer ak_a86cc07d699a0dedac4afbfa84860e35d47c88ddd95d33ad4f18f43ad9919d1b" "https://api.salesloft.com/v2/people.json?ids%5B%5D=1"
+curl -H "Authorization: Bearer API_KEY" "https://api.salesloft.com/v2/people.json" | json_pp
 
-
-
-curl -H "Authorization: Bearer ak_a86cc07d699a0dedac4afbfa84860e35d47c88ddd95d33ad4f18f43ad9919d1b" "https://api.salesloft.com/v2/people.json" | json_pp
-
+curl -H "Authorization: Bearer API_KEY" "https://api.salesloft.com/v2/people.json?page=1&per_page=25&include_paging_counts=true" | json_pp

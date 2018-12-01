@@ -1,0 +1,19 @@
+%div.container-fluid
+  .people.title.row
+    %h2 People
+
+  = will_paginate @people, renderer: BootstrapPagination::Rails
+
+  .people.content.row
+    %table.table.table-hover
+      %thead
+        %tr
+          %th NAME
+          %th EMAIL
+          %th JOB TITLE
+      %tbody
+        - @people.each do |p|
+          %tr
+            %td="#{p['first_name']} #{p['last_name']}"
+            %td="#{p['email_address']}"
+            %td="#{p['title']}"
