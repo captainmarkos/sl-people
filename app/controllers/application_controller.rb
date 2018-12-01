@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   # controller actions that need it.
   def load_pagination
     @page = (params[:page].blank? ? 1 : params[:page].to_i)
-    @per_page = 25
+    @per_page = 10
     if @page.negative?
       response = {
         errors: [I18n.t('errors.negative_page')]

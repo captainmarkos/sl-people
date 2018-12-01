@@ -1,8 +1,13 @@
-%div.container-fluid
-  .people.title.row
-    %h2 People
+%div.container
+  .people.row
+    %h2 People List
 
-  = will_paginate @people, renderer: BootstrapPagination::Rails
+  %br/
+
+  .people.row
+    = button_to 'Calculate Email Character Frequencies', frequency_people_path, method: :get, class: 'btn btn-primary'
+
+  %br/
 
   .people.content.row
     %table.table.table-hover
@@ -17,3 +22,5 @@
             %td="#{p['first_name']} #{p['last_name']}"
             %td="#{p['email_address']}"
             %td="#{p['title']}"
+
+  = will_paginate @people, renderer: BootstrapPagination::Rails

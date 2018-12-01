@@ -1,0 +1,19 @@
+%div{style: 'margin-left: 20px;'}
+  %h3 Displays a frequency count of all the unique characters in all the email addresses of all the People, sorted by frequency count.
+
+  %br/
+
+  = button_to 'Back to People List', people_path, method: :get, class: 'btn btn-primary'
+
+  %br/
+
+  %table.table.table-hover{style: 'width: 200px; margin-left: 20px;'}
+    %thead
+      %tr
+        %th CHARACTER
+        %th COUNT
+    %tbody
+      - email_frequencies(@people).each do |freq|
+        %tr
+          %td="#{freq[0]}"
+          %td="#{freq[1]}"

@@ -21,6 +21,8 @@ Style/Next:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/SymbolArray:
+  EnforcedStyle: brackets
 AllCops:
   Include:
     - Rakefile
