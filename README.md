@@ -24,39 +24,42 @@ application up and running.
 
 Things you may want to cover:
 
-Ruby version
+### Ruby version
+
 ```
 > ruby -v
 ruby 2.4.5p335 (2018-10-18 revision 65137) [x86_64-darwin17]
 ```
-Rails version
+### Rails version
+
 ```
 > rails -v
 Rails 5.2.1.1
 ```
-Configuration
+### Configuration
+
 ```
 > bundle install
 ```
-Run the app
+### Run the app
 ```
 > rails server
 ```
 Hit the front-end with: `http://0.0.0.0:3000/people`
 
-Linter
+### Linter
 ```
 > rubocop
 ```
-* How to run the test suite
+### How to run the test suite
+TBC...
 
-
-* Testing the API end-point for People:
+### Testing the API end-point for People with curl:
 ```
 > curl -H "Authorization: Bearer API_KEY" "https://api.salesloft.com/v2/people.json"
 
 ```
-* People response with paging info
+### People response with paging info
 ```
 > curl -H "Authorization: Bearer API_KEY" "https://api.salesloft.com/v2/people.json?page=1&per_page=25&include_paging_counts=true"
 ```
