@@ -2,9 +2,9 @@
 
 This app fulfils the following code challenges:
 
-`Level 1`: Show a list of People records that are available via the API.  Display each Person’s name, email address, and job title.
+*`Level 1`*: Show a list of People records that are available via the API.  Display each Person’s name, email address, and job title.
 
-`Level 2`: Create a button that, when clicked, displays a frequency count of all the unique characters in all the email addresses of all the People you have access to, sorted by frequency count (the count below).
+*`Level 2`*: Create a button that, when clicked, displays a frequency count of all the unique characters in all the email addresses of all the People you have access to, sorted by frequency count (the count below).
 
 For example, if there was only 1 Person record returned by the API with the email address “jimmy_mcmahon@salesloft.com”, it would show a frequency breakdown that looks like:
 ```
