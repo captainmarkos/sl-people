@@ -17,6 +17,10 @@ Character Count
 
 *`Level 3`*:  Create a 2nd button that would show us a list of suggested possible duplicate People.  A human can tell that “benoliv@salesloft.com” and “benolive@salesloft.com” are very likely the same person with just one of the email addresses having a typo.  However we would like you to decide what might constitute a duplicate - up to you.
 
+See documentation [SalesLoft_Engineering_Offline_Exercise_v3.pdf](https://github.com/captainmarkos/sl-people/blob/master/SalesLoft_Engineering_Offline_Exercise_v3.pdf)
+
+Note: The frequency table is incorrect in this (original) document.
+
 ### Ruby version
 
 ```
