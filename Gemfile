@@ -23,6 +23,8 @@ gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap'
 # add bootstrap style to pagination
 
+gem 'fuzzy-string-match'
+
 group :development, :test do
   #gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 

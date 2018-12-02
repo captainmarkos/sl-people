@@ -5,7 +5,9 @@
   %br/
 
   .people.row
-    = button_to 'Calculate Email Character Frequencies', frequency_people_path, method: :get, class: 'btn btn-primary'
+    = link_to 'Calculate Email Character Frequencies', frequency_people_path, class: 'btn btn-primary'
+
+    = link_to 'Detect Possible Duplicate People', possible_duplicates_people_path, class: 'btn btn-primary'
 
   %br/
 

@@ -1,6 +1,8 @@
 class PeopleController < ApplicationController
-  before_action :load_api, only: [:index, :frequency]
+  before_action :load_api, only: [:index, :frequency, :possible_duplicates]
   before_action :load_pagination, only: [:index]
+
+  include NearDuplicates
 
   def index
     response = @people_api.fetch(@page, @per_page)
@@ -22,11 +24,25 @@ class PeopleController < ApplicationController
   end
 
   def possible_duplicates
+    # Detect near duplicates for email addresses and names (first & last).
+    # The higher the threshold the greater the possibility of a duplicate.
+    # Using threshold = 1 would mean an exact match.
     load_all_people
 
+    emails = @people.each_with_object([]) { |p, r| r << p['email_address'] }
+    @possible_email_dups = detect_near_dups(emails, threshold)
+
+    names = @people.each_with_object([]) do |p, r|
+      r << "#{p['first_name']} #{p['last_name']}"
+    end
+    @possible_name_dups = detect_near_dups(names, threshold)
   end
 
   private
+
+  def threshold
+    params[:threshold].blank? ? 0.88 : params[:threshold].to_f
+  end
 
   def load_people(options)
     @people ||= (1..options[:total_count]).reduce([]) { |r, _i| r << {} }

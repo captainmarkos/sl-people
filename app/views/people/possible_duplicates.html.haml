@@ -1,0 +1,52 @@
+:javascript
+  function reload_list(threshold) {
+    val = threshold.options[threshold.selectedIndex].value;
+    var url = location.toString().split('?')[0] + '?threshold=' + val;
+    location.assign(url);
+  }
+
+%div{style: 'margin-left: 20px;'}
+  %h3 Shows a list of near duplicates for People.
+
+  %br/
+
+  = link_to 'Back to People List', people_path, class: 'btn btn-primary'
+
+  = select_tag :threshold, options_for_threshold(params[:threshold]), onchange: 'reload_list(this);'
+  %span= 'Distance Threshold (1 is exact match): '
+
+  %br/
+
+  %table{style: '500px; margin-left: 20px;'}
+    %tr
+      %td{style: 'vertical-align: top;'}
+        %table.table.table-hover
+          %thead
+            %tr
+              %th EMAIL
+              %th POSSIBLE DUPLICATE / DISTANCE
+          %tbody
+            - @possible_email_dups.keys.each do |email|
+              %tr
+                %td="#{email}"
+                %td
+                  - @possible_email_dups[email].each do |dups|
+                    %span= dups[:value]
+                    %span{style: 'color: #ff0000;'}= "(#{dups[:distance].round(4)})"
+                    %br/
+
+      %td{style: 'padding-left: 40px; vertical-align: top;'}
+        %table.table.table-hover
+          %thead
+            %tr
+              %th NAME
+              %th POSSIBLE DUPLICATE / DISTANCE
+          %tbody
+            - @possible_name_dups.keys.each do |name|
+              %tr
+                %td="#{name}"
+                %td
+                  - @possible_name_dups[name].each do |dups|
+                    %span= dups[:value]
+                    %span{style: 'color: #ff0000;'}= "(#{dups[:distance].round(4)})"
+                    %br/
