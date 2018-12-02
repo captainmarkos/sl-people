@@ -1,4 +1,4 @@
-# Sales Loft Code Challenges
+# SalesLoft Code Challenges
 
 This app fulfils the following code challenges:
 
@@ -44,8 +44,6 @@ Hit the front-end with: `http://0.0.0.0:3000/people`
 ```
 > rubocop
 ```
-### How to run the test suite
-TBC...
 
 ### Testing the API end-point for People with curl:
 ```
