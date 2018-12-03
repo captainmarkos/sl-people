@@ -64,7 +64,7 @@ Hit the front-end with: `http://0.0.0.0:3000/people`
 > curl -H "Authorization: Bearer API_KEY" "https://api.salesloft.com/v2/people.json"
 
 ```
-### People response with paging info
+### People response with paging info:
 ```
 > curl -H "Authorization: Bearer API_KEY" "https://api.salesloft.com/v2/people.json?page=1&per_page=25&include_paging_counts=true"
 ```
