@@ -37,7 +37,10 @@ Rails 5.2.1.1
 
 ```
 > bundle install
+> cp .env-sample .env
 ```
+Add the appropriate API key to `.env`
+
 ### Run the app
 ```
 > rails server
