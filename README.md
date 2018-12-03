@@ -1,6 +1,6 @@
 # SalesLoft Code Challenges
 
-This app fulfils the following code challenges:
+This app fulfills the following code challenges:
 
 *`Level 1`*: Show a list of People records that are available via the API.  Display each Person’s name, email address, and job title.
 
