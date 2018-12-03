@@ -1,6 +1,6 @@
 module PeopleHelper
   def email_frequencies(people)
-    chars = Hash.new(0)
+    chars = Hash.new(0) # sets default value for any key to 0
 
     people.each do |p|
       str = p['email_address']
