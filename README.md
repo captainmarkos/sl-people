@@ -47,6 +47,13 @@ Add the appropriate API key to `.env`
 ```
 Hit the front-end with: `http://0.0.0.0:3000/people`
 
+### Screenshots
+[Level 1 - People List](https://raw.githubusercontent.com/captainmarkos/sl-people/master/app/assets/images/People_List_Level_1.png)
+
+[Level 2 - Character Frequencies](https://raw.githubusercontent.com/captainmarkos/sl-people/master/app/assets/images/Character_Frequencies_Level_2.png)
+
+[Level 3 - Possible Duplicate Detection](https://raw.githubusercontent.com/captainmarkos/sl-people/master/app/assets/images/Possible_Dups_Level_3.png)
+
 ### Linter
 ```
 > rubocop
