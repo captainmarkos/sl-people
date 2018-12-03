@@ -37,7 +37,7 @@ Rails 5.2.1.1
 
 ```
 > bundle install
-> cp .env-sample .env
+> cp .env.example .env
 ```
 Add the appropriate API key to `.env`
 
